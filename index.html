@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Christa B.</title>
+    <!-- favicon sparkle icon -->
+    <link rel="icon" href="https://openmoji.org/data/color/svg/2728.svg" />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!-- adobe font -->
+    <link rel="stylesheet" href="https://use.typekit.net/bwi1nvh.css" />
+    <!-- custom css -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col banner">
+          <ul id="menu">
+            <a
+              class="menu-button icon-plus"
+              id="open-menu"
+              href="#menu"
+              title="Show navigation"
+              onclick="animatePaw()"
+            >
+              <img
+                src="https://i.imgur.com/8jkQAh9.png"
+                width="285px"
+                height="285px"
+                alt="Image that shows Baab character sleeping."
+              />
+            </a>
+            <!-- used to toggle menu opening -->
+            <a
+              class="menu-button icon-minus"
+              href="#0"
+              title="Hide navigation"
+              onclick="animatePaw()"
+            >
+              <!-- prevents toggle now 
+            <a class="menu-button icon-minus" title="Hide navigation">-->
+
+              <img
+                id="center-pic"
+                src="https://i.imgur.com/OYTKeHM.png"
+                width="285px"
+                height="285px"
+                alt="Image that shows Baab character waving 'hi'."
+              />
+            </a>
+            <div id="paw">
+              <li
+                class="menu-item"
+                id="projects-btn"
+                onmouseover="setWorkImage()"
+                onmouseout="setOldImage()"
+                onClick="document.getElementById('projects').scrollIntoView()"
+              >
+                <a href="#projects">
+                  <button class="button" type="button">
+                    <img
+                      src="https://i.imgur.com/X9ZBCtn.png"
+                      width="70px"
+                      height="70px"
+                      alt="Icon that looks like a desktop computer."
+                    />
+                  </button>
+
+                  <i
+                    class="fa-solid fa-star project-star small-star"
+                    id="small-star-2"
+                  ></i>
+                  <i
+                    class="fa-solid fa-star project-star big-star"
+                    id="big-star-2"
+                  ></i
+                ></a>
+              </li>
+
+              <li class="menu-item" id="about-me-btn">
+                <a href="#about-me">
+                  <button
+                    class="button"
+                    type="button"
+                    onmouseover="setAboutImage()"
+                    onmouseout="setOldImage()"
+                    onClick="document.getElementById('about-me').scrollIntoView()"
+                  >
+                    <img
+                      src="https://i.imgur.com/uBVuBCu.png"
+                      width="70px"
+                      height="70px"
+                      alt="Icon that looks like my Baab character."
+                    />
+                  </button>
+
+                  <i
+                    class="fa-solid fa-star about-star small-star"
+                    id="small-star-1"
+                  ></i>
+                  <i
+                    class="fa-solid fa-star about-star big-star"
+                    id="big-star-1"
+                  ></i
+                ></a>
+              </li>
+
+              <li
+                class="menu-item"
+                id="artwork-btn"
+                onmouseover="setPaintImage()"
+                onmouseout="setOldImage()"
+              >
+                <a href="#artwork">
+                  <button
+                    class="button"
+                    type="button"
+                    onClick="document.getElementById('artwork-section').scrollIntoView()"
+                  >
+                    <img
+                      src="https://i.imgur.com/wdTivXf.png"
+                      width="70px"
+                      height="70px"
+                      alt="Icon that looks like a paint brush."
+                    />
+                  </button>
+                  <i
+                    class="fa-solid fa-star artwork-star small-star"
+                    id="small-star-4"
+                  ></i>
+                  <i
+                    class="fa-solid fa-star artwork-star big-star"
+                    id="big-star-4"
+                  ></i
+                ></a>
+              </li>
+
+              <li
+                class="menu-item"
+                id="contact-btn"
+                onmouseover="setMailImage()"
+                onmouseout="setOldImage()"
+              >
+                <a href="#contact">
+                  <button
+                    class="button"
+                    type="button"
+                    onClick="document.getElementById('contact').scrollIntoView()"
+                  >
+                    <img
+                      src="https://i.imgur.com/gvZLYUr.png"
+                      width="70px"
+                      height="70px"
+                      alt="Icon that looks like an envelope."
+                    />
+                  </button>
+
+                  <i
+                    class="fa-solid fa-star contact-star small-star"
+                    id="small-star-3"
+                  ></i>
+                  <i
+                    class="fa-solid fa-star contact-star big-star"
+                    id="big-star-3"
+                  ></i
+                ></a>
+              </li>
+
+              <img
+                id="paw-img"
+                class="img-fluid"
+                src="https://i.imgur.com/N0AdRW4.png"
+                width="496px"
+                height="781px"
+                alt="A white cat-like paw to display below the buttons to display the 'toe bean' effect."
+              />
+              <div class="content" id="intro-text">
+                <article>
+                  <h1 id="button-desc">Hi! My name is Christa.</h1>
+                </article>
+              </div>
+            </div>
+          </ul>
+          <div class="bg">
+            <ul class="bg-area">
+              <li>☁️</li>
+              <li>☁️</li>
+              <li>☁️</li>
+              <li>☁️</li>
+              <li>☁️</li>
+              <li>☁️</li>
+              <li>☁️</li>
+              <li>☁️</li>
+              <li>☁️</li>
+              <li>☁️</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="row below-banner">
+        <div class="row reveal" id="about-me">
+          <div class="col main-content">
+            <h1 class="section-title about-me-title">
+              About Me
+              <img
+                class="pixel-art"
+                src="https://i.imgur.com/emFiJJ9.gif"
+                width="64px"
+                height="64px"
+                alt="Pixel gif icon of my Baab character in an idle animation."
+              />
+            </h1>
+          </div>
+        </div>
+        <div class="row reveal main-content">
+          <div class="col-lg-8 about-me-content">
+            <p>
+              Hi there! I'm a senior Computer Science student at the
+              <a
+                id="uni-link"
+                href="https://www.utsa.edu/about/#_ga=2.152297658.2089622757.1680803680-701692048.1680803537"
+                target="_blank"
+                ><strong>University of Texas at San Antonio</strong></a
+              >, working towards graduating with concentrations in Data Science
+              and Software Engineering. I'm passionate about exploring the
+              intersection of the two subjects that I love: technology and art.
+              Using what I've learned, I aim to create accessible, user-friendly
+              interfaces and data visualizations that showcase the beauty and
+              potential of both fields.
+            </p>
+            <p>
+              Outside of tech, you can find me working on digital illustrations,
+              3D modeling, playing video games, exploring fashion, and
+              practicing / performing traditional Indonesian dance.
+            </p>
+          </div>
+          <div class="col-lg-4 my-picture-col">
+            <div class="my-picture-wrapper">
+              <img
+                class="img-fluid"
+                id="my-picture"
+                src="https://i.imgur.com/ssSLXMB.jpg"
+                width="300px"
+                height="300px"
+                alt="Image of me wearing traditional Indonesian dress."
+              />
+            </div>
+          </div>
+        </div>
+        <div class="row main-content resume-section reveal">
+          <div class="col resume-line resume-line-one"></div>
+          <div class="col resume">
+            <a
+              id="resume-link"
+              href="./assets/resources/christa_baca_resume.pdf"
+              target="_blank"
+            >
+              <button id="resume-btn">
+                View resume
+                <i class="fa-solid fa-file-lines"></i>
+              </button>
+            </a>
+          </div>
+          <div class="col resume-line resume-line-two"></div>
+        </div>
+        <div class="row main-content technology-experience-section">
+          <div class="col">
+            <p class="reveal">
+              Here are some languages I have experience working with:
+            </p>
+            <ul class="technologies">
+              <li class="reveal skill">Python</li>
+              <li class="reveal skill">Java / JavaFX</li>
+              <li class="reveal skill">C#</li>
+              <li class="reveal skill">C / C++</li>
+              <li class="reveal skill">HTML & CSS with Bootstrap</li>
+              <li class="reveal skill">PHP</li>
+              <li class="reveal skill">Node.js / Electron.js</li>
+              <li class="reveal skill">Javascript / AJAX / jQuery</li>
+              <li class="reveal skill">SQL</li>
+              <li class="reveal skill">Bash</li>
+            </ul>
+          </div>
+          <div class="col">
+            <p class="reveal">
+              As well as a list of additional tools / environments that I use:
+            </p>
+            <ul class="technologies">
+              <li class="reveal skill">AWS</li>
+              <li class="reveal skill">Adobe Dreamweaver</li>
+              <li class="reveal skill">Google Colab</li>
+              <li class="reveal skill">Jupyter Notebook</li>
+              <li class="reveal skill">WordPress</li>
+              <li class="reveal skill">Eclipse</li>
+              <li class="reveal skill">Unity with Plastic SCM</li>
+              <li class="reveal skill">Vim</li>
+              <li class="reveal skill">Visual Studio Code</li>
+              <li class="reveal skill">Linux / Ubuntu Distribution</li>
+            </ul>
+          </div>
+        </div>
+        <div class="row reveal" id="projects">
+          <div class="col main-content">
+            <h1 class="section-title">
+              Projects<img
+                class="pixel-art"
+                src="https://i.imgur.com/a2Y2jWr.gif"
+                width="64px"
+                height="64px"
+                alt="Pixel gif icon of my Baab character hammering away at a laptop."
+              />
+            </h1>
+          </div>
+        </div>
+        <div
+          class="row row-cols-1 row-cols-md-3 g-4 main-content project-cards"
+        >
+          <div class="col reveal card1" id="card1">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Rowdy Chat</h5>
+                <!--
+                  <div class="col card-links">
+                    <a href="https://github.com/" target="_blank"
+                      ><i class="fa-brands fa-github"></i
+                    ></a>
+                  </div>
+                  -->
+
+                <img
+                  class="card-img project-icon img-fluid"
+                  src="https://i.imgur.com/V78uad3.png"
+                  alt="Logo of Rowdy, the roadrunner mascot from UTSA."
+                />
+                <p class="card-text">
+                  A ChatGPT-inspired web-app that allows you to talk to UTSA's
+                  Rowdy mascot. Developed with Python using OpenAI and Gradio
+                  libraries.
+                </p>
+                <div class="card-links">
+                  <a
+                    href="https://github.com/cjb-dev/MLH_Hackathon_2023.git"
+                    target="_blank"
+                    ><i class="fa-brands fa-github"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col reveal card2" id="card2">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5>Debug Coffee</h5>
+
+                <img
+                  class="card-img project-icon img-fluid"
+                  src="https://i.imgur.com/g4PFN5z.png"
+                  alt="Logo that displays a bug shaped like a coffee bean, (hence 'Debug Coffee')."
+                />
+                <p class="card-text">
+                  An ecommerce website for tech enthusiasts and coffee lovers.
+                  Built on WordPress with some custom CSS, deployed via AWS with
+                  phpMyAdmin configuration.
+                </p>
+                <div class="card-links-wrapper">
+                  <div class="card-links">
+                    <div class="card-links-inner">
+                      <a href="https://debugcoffee.org/" target="_blank">
+                        <i class="fa-solid fa-up-right-from-square"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col reveal card3" id="card3">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">CNN & LSTM Models</h5>
+                <img
+                  class="card-img project-icon img-fluid"
+                  src="https://i.imgur.com/MgWA5YB.png"
+                  alt="Logo that represents a neural network."
+                />
+                <p class="card-text">
+                  A set of deep learning models for image and text
+                  classification. Made in Python utilizing the TensorFlow Keras
+                  API and CIFAR-100 / Reuters datasets.
+                </p>
+                <div class="card-links">
+                  <a
+                    href="https://github.com/buttabun/AI--Deep-Learning-Models.git"
+                    target="_blank"
+                    ><i class="fa-brands fa-github"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col reveal card4" id="card4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Chess AI</h5>
+                <img
+                  class="card-img project-icon img-fluid"
+                  src="https://i.imgur.com/z1XlpD7.png"
+                  alt="Logo that shows a queen chess piece."
+                />
+                <p class="card-text">
+                  A program that simulates a game of chess between two
+                  "players": Random AI and MinMax AI. Created in Google Colab
+                  using mostly pure Python.
+                </p>
+                <div class="card-links">
+                  <a
+                    href="https://github.com/buttabun/AI--Chess-Random-VS-MinMax.git"
+                    target="_blank"
+                    ><i class="fa-brands fa-github"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col reveal card5" id="card5">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Project-V</h5>
+                <img
+                  class="card-img project-icon img-fluid"
+                  src="https://i.imgur.com/bRtw0Vc.png"
+                  alt="Logo that displays a platypus in a 'P' pose, showcasing my group's fictional 'company' mascot."
+                />
+                <p class="card-text">
+                  A video game about an infected player wreaking havoc on their
+                  village. Developed in Unity using C# and original Blender +
+                  Adobe assets.
+                </p>
+                <div class="card-links">
+                  <a
+                    href="https://github.com/buttabun/Project-V.git"
+                    target="_blank"
+                    ><i class="fa-brands fa-github"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col reveal card6" id="card6">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Base Conversion Game</h5>
+                <img
+                  class="card-img project-icon img-fluid"
+                  src="https://i.imgur.com/FSDIbnT.png"
+                  alt="Logo that displays basic arithmetic operators in mathematics."
+                />
+                <p class="card-text">
+                  An application to test knowledge on base conversion problems
+                  at various difficulty levels. Developed using Java with a
+                  JavaFX GUI.
+                </p>
+                <div class="card-links">
+                  <a
+                    href="https://github.com/buttabun/Base-Conversion-Game.git"
+                    target="_blank"
+                    ><i class="fa-brands fa-github"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row row-cols-1 row-cols-md-3 g-4" id="hidden-projects">
+          <div class="col hidden-card card7" id="card7">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Name Generator</h5>
+                <img
+                  class="card-img project-icon img-fluid"
+                  src="https://i.imgur.com/qhapGfn.png"
+                  alt="Logo that shows Name Generator typography."
+                />
+                <p class="card-text">
+                  A simple website that uses hashing to generate a unique name
+                  for the given input. Made with HTML / CSS and Javascript.
+                </p>
+                <div class="card-links">
+                  <a
+                    href="https://devpost.com/software/namegenerator-tech"
+                    target="_blank"
+                    ><i class="fa-solid fa-up-right-from-square"></i
+                  ></a>
+                  <a
+                    href="https://github.com/buttabun/hackathon_project_2"
+                    target="_blank"
+                    ><i class="fa-brands fa-github"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col hidden-card card8" id="card8">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Search Algorithms</h5>
+                <img
+                  class="card-img project-icon img-fluid"
+                  src="https://i.imgur.com/ax8fsf1.png"
+                  alt="Logo that displays solid image of Texas."
+                />
+                <p class="card-text">
+                  A Python project to develop informed & uninformed search
+                  algorithms for mapping Texas cities. Results are visualized by
+                  overlaying graph on top of the TX map.
+                </p>
+                <div class="card-links">
+                  <a
+                    href="https://github.com/buttabun/AI-Search-Algorithms"
+                    target="_blank"
+                    ><i class="fa-brands fa-github"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col hidden-card card9" id="card9">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Interpolation Research</h5>
+                <img
+                  class="card-img project-icon img-fluid"
+                  src="https://i.imgur.com/Ohjhbtr.png"
+                  alt="Logo that represents the motion frames for a moving ball animation."
+                />
+                <p class="card-text">
+                  A compilation of research findings in the topic of frame
+                  interpolation using AI technologies such as DAIN and RIFE,
+                  showcased on a WordPress webpage.
+                </p>
+                <div class="card-links">
+                  <a
+                    href="https://courseproject5.wordpress.com/"
+                    target="_blank"
+                    ><i class="fa-solid fa-up-right-from-square"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row row-cols-1 row-cols-md-3">
+          <div class="col"></div>
+          <div class="col">
+            <div class="hidden-projects-btn-wrapper">
+              <button
+                class="reveal"
+                id="hidden-projects-btn"
+                onclick="showMore()"
+              >
+                Show more <i class="fa-solid fa-arrow-down"></i>
+              </button>
+            </div>
+          </div>
+          <div class="col"></div>
+        </div>
+
+        <div class="row reveal" id="artwork">
+          <div class="col main-content">
+            <h1 class="section-title">
+              Artwork
+              <img
+                class="pixel-art"
+                src="https://i.imgur.com/8Chvqjr.gif"
+                width="64px"
+                height="64px"
+                alt="Pixel gif icon of my Baab character blushing."
+              />
+            </h1>
+          </div>
+        </div>
+        <div class="row reveal main-content">
+          <div class="col">
+            <p>
+              In the past, I've made art for organizations such as my high
+              school, local church, and BSA troop. I've designed fiesta medals,
+              patches, shirts, stationary, product prototypes, and a ton of the
+              icons you see on this page! Art has always been a huge passion of
+              mine since childhood, and I love integrating it with new
+              technologies that I learn, wherever possible.
+            </p>
+            <p>
+              If you are interested in viewing more of my artwork, please feel
+              free to check out some of my samples below. Included are works
+              arranged by different mediums and styles that you won't typically
+              see on the websites that I build:
+            </p>
+          </div>
+        </div>
+        <div class="row reveal main-content">
+          <div class="col art-carousel">
+            <div
+              id="carouselExampleCaptions"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="https://i.imgur.com/fr4uxfy.jpg"
+                    class="d-block w-100 portfolio-art"
+                    alt="Slide that showcases my traditional artwork (made with pencil / ink / paper)."
+                  />
+                  <div class="carousel-caption d-md-block">
+                    <h5>Traditional</h5>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="https://i.imgur.com/tKaD9cu.jpg"
+                    class="d-block w-100 portfolio-art"
+                    alt="Slide that showcases my digital illustration artwork (made with Krita)."
+                  />
+                  <div class="carousel-caption d-md-block">
+                    <h5>Digital Illustration</h5>
+                  </div>
+                </div>
+                <!--
+                <div class="carousel-item">
+                  <img
+                    src="https://i.imgur.com/tuam7Kf.jpg"
+                    class="d-block w-100 portfolio-art"
+                    alt="..."
+                  />
+                  <div class="carousel-caption d-md-block">
+                    <h5>Digital Illustration cont.</h5>
+                  </div>
+                </div>-->
+                <div class="carousel-item">
+                  <img
+                    src="https://i.imgur.com/r1Nq1As.jpg"
+                    class="d-block w-100 portfolio-art"
+                    alt="Slide that showcases my low-poly 3D models (made in Blender)."
+                  />
+                  <div class="carousel-caption d-md-block">
+                    <h5>3D Modeling</h5>
+                  </div>
+                </div>
+                <!--
+                <div class="carousel-item">
+                  <img
+                    src="https://i.imgur.com/Bljj1xw.jpg"
+                    class="d-block w-100 portfolio-art"
+                    alt="..."
+                  />
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Photo Editing & Compositing</h5>
+                  </div>
+                </div>-->
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="row reveal main-content">
+          <div class="col">
+            <p>
+              Art software that I use: Adobe Illustrator & Photoshop, Blender,
+              Krita
+            </p>
+          </div>
+        </div>
+        <div class="row reveal" id="contact">
+          <div class="col main-content">
+            <h1 class="section-title">
+              Contact
+              <img
+                class="pixel-art"
+                src="https://i.imgur.com/Ku9dg7N.gif"
+                width="64px"
+                height="64px"
+                alt="Pixel gif icon of my Baab character riding a balloon."
+              />
+            </h1>
+          </div>
+        </div>
+        <div class="row reveal">
+          <div class="col main-content">
+            <p>Have any questions? Fill out my contact form below!</p>
+          </div>
+        </div>
+        <div class="row reveal">
+          <div class="col main-content">
+            <div class="form-wrapper" id="form-wrapper">
+              <form
+                action="https://docs.google.com/forms/d/e/1FAIpQLSevLP0vdJWwOQAIhYCCyLq8-IHgdXiNBNQ3saJCWbTE8pwV-g/formResponse
+        "
+                method="post"
+                id="contact-form"
+              >
+                <div class="form-title"><h5>Get in touch</h5></div>
+                <label for="entry.1092509985">Name</label> <br />
+                <div class="input-icon">
+                  <i class="fa-solid fa-user"></i>
+                  <input type="text" name="entry.1092509985" />
+                </div>
+                <br />
+
+                <label for="entry.1676135607">Email</label><br />
+                <div class="input-icon">
+                  <i class="fa-solid fa-envelope"></i>
+                  <input type="text" name="entry.1676135607" />
+                </div>
+                <br />
+
+                <label for="entry.1110607706">Message</label> <br />
+                <div class="input-icon">
+                  <i class="fa-solid fa-message"></i>
+                  <textarea rows="5" name="entry.1110607706"> </textarea>
+                </div>
+                <br />
+                <div class="form-btn-wrapper">
+                  <button type="submit">
+                    Send message
+                    <i id="submit-arrow" class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div id="submission-message">
+              <div class="sub-msg-content">
+                <ul class="sub-msg-content">
+                  <li><i class="fa-solid fa-paper-plane"></i></li>
+                  <li><h5>Submission sent.</h5></li>
+                  <li><p>I look forward to reaching you soon!</p></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row thank-you-section">
+          <div class="row reveal">
+            <div class="col main-content thank-you">
+              <h2>Thank you so much for stopping by!</h2>
+            </div>
+          </div>
+          <div class="row reveal">
+            <div class="col main-content thank-you">
+              <i class="fa-solid fa-heart"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <footer>
+            <div class="row">
+              <div class="col"><p>&#169; Christa Baca 2023</p></div>
+              <div class="col personal-email">
+                <p>christa.j.baca@gmail.com</p>
+              </div>
+              <div class="col socials">
+                <a href="https://github.com/cjb-dev" target="_blank"
+                  ><i class="fa-brands fa-square-github"></i
+                ></a>
+                <a
+                  href="https://www.linkedin.com/in/christa-baca"
+                  target="_blank"
+                >
+                  <i class="fa-brands fa-linkedin"></i
+                ></a>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>
+      <!--back to top button-->
+      <button
+        type="button"
+        class="btn btn-floating btn-lg"
+        id="btn-back-to-top"
+      >
+        <i class="fa-solid fa-arrow-up"></i>
+      </button>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
