@@ -48,7 +48,8 @@
             <!-- used to toggle menu opening -->
             <a
               class="menu-button icon-minus"
-              href="#0"
+              href="#closed-menu"
+              id="close-menu"
               title="Hide navigation"
               onclick="animatePaw()"
             >
@@ -71,53 +72,49 @@
                 onmouseout="setOldImage()"
                 onClick="document.getElementById('projects').scrollIntoView()"
               >
-                <a href="#projects">
-                  <button class="button" type="button">
-                    <img
-                      src="https://i.imgur.com/X9ZBCtn.png"
-                      width="70px"
-                      height="70px"
-                      alt="Icon that looks like a desktop computer."
-                    />
-                  </button>
+                <button class="button" type="button">
+                  <img
+                    src="https://i.imgur.com/X9ZBCtn.png"
+                    width="70px"
+                    height="70px"
+                    alt="Icon that looks like a desktop computer."
+                  />
+                </button>
 
-                  <i
-                    class="fa-solid fa-star project-star small-star"
-                    id="small-star-2"
-                  ></i>
-                  <i
-                    class="fa-solid fa-star project-star big-star"
-                    id="big-star-2"
-                  ></i
-                ></a>
+                <i
+                  class="fa-solid fa-star project-star small-star"
+                  id="small-star-2"
+                ></i>
+                <i
+                  class="fa-solid fa-star project-star big-star"
+                  id="big-star-2"
+                ></i>
               </li>
 
               <li class="menu-item" id="about-me-btn">
-                <a href="#about-me">
-                  <button
-                    class="button"
-                    type="button"
-                    onmouseover="setAboutImage()"
-                    onmouseout="setOldImage()"
-                    onClick="document.getElementById('about-me').scrollIntoView()"
-                  >
-                    <img
-                      src="https://i.imgur.com/uBVuBCu.png"
-                      width="70px"
-                      height="70px"
-                      alt="Icon that looks like my Baab character."
-                    />
-                  </button>
+                <button
+                  class="button"
+                  type="button"
+                  onmouseover="setAboutImage()"
+                  onmouseout="setOldImage()"
+                  onClick="document.getElementById('about-me').scrollIntoView()"
+                >
+                  <img
+                    src="https://i.imgur.com/uBVuBCu.png"
+                    width="70px"
+                    height="70px"
+                    alt="Icon that looks like my Baab character."
+                  />
+                </button>
 
-                  <i
-                    class="fa-solid fa-star about-star small-star"
-                    id="small-star-1"
-                  ></i>
-                  <i
-                    class="fa-solid fa-star about-star big-star"
-                    id="big-star-1"
-                  ></i
-                ></a>
+                <i
+                  class="fa-solid fa-star about-star small-star"
+                  id="small-star-1"
+                ></i>
+                <i
+                  class="fa-solid fa-star about-star big-star"
+                  id="big-star-1"
+                ></i>
               </li>
 
               <li
@@ -126,28 +123,26 @@
                 onmouseover="setPaintImage()"
                 onmouseout="setOldImage()"
               >
-                <a href="#artwork">
-                  <button
-                    class="button"
-                    type="button"
-                    onClick="document.getElementById('artwork-section').scrollIntoView()"
-                  >
-                    <img
-                      src="https://i.imgur.com/wdTivXf.png"
-                      width="70px"
-                      height="70px"
-                      alt="Icon that looks like a paint brush."
-                    />
-                  </button>
-                  <i
-                    class="fa-solid fa-star artwork-star small-star"
-                    id="small-star-4"
-                  ></i>
-                  <i
-                    class="fa-solid fa-star artwork-star big-star"
-                    id="big-star-4"
-                  ></i
-                ></a>
+                <button
+                  class="button"
+                  type="button"
+                  onClick="document.getElementById('artwork').scrollIntoView()"
+                >
+                  <img
+                    src="https://i.imgur.com/wdTivXf.png"
+                    width="70px"
+                    height="70px"
+                    alt="Icon that looks like a paint brush."
+                  />
+                </button>
+                <i
+                  class="fa-solid fa-star artwork-star small-star"
+                  id="small-star-4"
+                ></i>
+                <i
+                  class="fa-solid fa-star artwork-star big-star"
+                  id="big-star-4"
+                ></i>
               </li>
 
               <li
@@ -156,29 +151,27 @@
                 onmouseover="setMailImage()"
                 onmouseout="setOldImage()"
               >
-                <a href="#contact">
-                  <button
-                    class="button"
-                    type="button"
-                    onClick="document.getElementById('contact').scrollIntoView()"
-                  >
-                    <img
-                      src="https://i.imgur.com/gvZLYUr.png"
-                      width="70px"
-                      height="70px"
-                      alt="Icon that looks like an envelope."
-                    />
-                  </button>
+                <button
+                  class="button"
+                  type="button"
+                  onClick="document.getElementById('contact').scrollIntoView()"
+                >
+                  <img
+                    src="https://i.imgur.com/gvZLYUr.png"
+                    width="70px"
+                    height="70px"
+                    alt="Icon that looks like an envelope."
+                  />
+                </button>
 
-                  <i
-                    class="fa-solid fa-star contact-star small-star"
-                    id="small-star-3"
-                  ></i>
-                  <i
-                    class="fa-solid fa-star contact-star big-star"
-                    id="big-star-3"
-                  ></i
-                ></a>
+                <i
+                  class="fa-solid fa-star contact-star small-star"
+                  id="small-star-3"
+                ></i>
+                <i
+                  class="fa-solid fa-star contact-star big-star"
+                  id="big-star-3"
+                ></i>
               </li>
 
               <img
