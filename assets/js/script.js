@@ -1,91 +1,105 @@
-//document.getElementById("paw").style.display = "none";
+let menu_clicked = false;
+const center_btn_image = document.getElementById("center-img");
+const paw_container = document.getElementById("paw");
+const intro_text = document.getElementById("intro-box");
+const button_desc = document.getElementById("button-desc");
 
-const menu_buttons = document.getElementsByClassName("menu-item");
+//Opens paw
+paw_container.classList.add("slide-in");
+intro_text.classList.add("slide-in");
 
-//When page loads, it will trigger the circle menu
+const center_button = document.getElementById("center-button");
+center_button.addEventListener("click", animatePaw);
 
-window.onload = function () {
-  var menuButton = document.getElementById("open-menu");
-  menuButton.click();
-  reveal();
-};
+/*menu button images */
+const about_me_button = document.getElementById("about-me-btn");
+about_me_button.addEventListener("mouseover", function () {
+  setMenuImage("about-me");
+});
 
-function setAboutImage() {
-  document.getElementById("center-pic").src = "https://i.imgur.com/4bOPC5D.png";
-  document.getElementById("button-desc").innerHTML = "About me";
-  document.getElementsByClassName("about-star").style.visibility = "visible";
-}
+about_me_button.addEventListener("mouseout", function () {
+  setMenuImage("hi");
+});
 
-function setWorkImage() {
-  document.getElementById("center-pic").src = "https://i.imgur.com/mhOObig.png";
-  document.getElementById("button-desc").innerHTML = "Projects";
-}
+const projects_button = document.getElementById("projects-btn");
+projects_button.addEventListener("mouseover", function () {
+  setMenuImage("projects");
+});
 
-function setPaintImage() {
-  document.getElementById("center-pic").src = "https://i.imgur.com/D7o8FlG.png";
-  document.getElementById("button-desc").innerHTML = "Artwork";
-}
+projects_button.addEventListener("mouseout", function () {
+  setMenuImage("hi");
+});
 
-function setMailImage() {
-  document.getElementById("center-pic").src = "https://i.imgur.com/gfFSfck.png";
-  document.getElementById("button-desc").innerHTML = "Contact";
-}
+const artwork_button = document.getElementById("artwork-btn");
+artwork_button.addEventListener("mouseover", function () {
+  setMenuImage("artwork");
+});
 
-function setOldImage() {
-  document.getElementById("center-pic").src = "https://i.imgur.com/OYTKeHM.png";
-  document.getElementById("button-desc").innerHTML = "Hi! My name is Christa.";
-}
+artwork_button.addEventListener("mouseout", function () {
+  setMenuImage("hi");
+});
 
-/*
-function showPaw() {
-  document.getElementById("paw").style.display = "block";
-  document.getElementById("button-desc").innerHTML = "Hi! My name is Christa.";
-}
+const contact_button = document.getElementById("contact-btn");
+contact_button.addEventListener("mouseover", function () {
+  setMenuImage("contact");
+});
 
-function hidePaw() {
-  document.getElementById("paw").style.animation = "reverse-paw 0.5s ease-in";
-  document.getElementById("paw").style.display = "none";
-  document.getElementById("button-desc").innerHTML = "";
-}*/
-
-let clicked = false;
+contact_button.addEventListener("mouseout", function () {
+  setMenuImage("hi");
+});
 
 function animatePaw() {
-  if (clicked) {
-    clicked = false;
-    document.getElementById("paw").classList.remove("slide-in");
-    document.getElementById("paw").classList.add("slide-out");
-
-    //document.getElementById("intro-text").style.visibility = "hidden";
+  if (menu_clicked) {
+    menu_clicked = false;
+    paw_container.classList.remove("slide-out");
+    paw_container.classList.add("slide-in");
+    intro_text.classList.remove("slide-out");
+    intro_text.classList.add("slide-in");
+    setMenuImage("hi");
   } else {
-    clicked = true;
-    document.getElementById("paw").classList.remove("slide-out");
-    document.getElementById("paw").classList.add("slide-in");
+    menu_clicked = true;
+    paw_container.classList.remove("slide-in");
+    paw_container.classList.add("slide-out");
+    intro_text.classList.remove("slide-in");
+    intro_text.classList.add("slide-out");
+    setMenuImage("sleep");
   }
 }
 
-//back to top button
-//Get the button
-let mybutton = document.getElementById("btn-back-to-top");
-
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function () {
-  scrollFunction();
-};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
+function setMenuImage(option) {
+  switch (option) {
+    case "hi":
+      center_btn_image.src = "https://i.imgur.com/OYTKeHM.png";
+      document.getElementById("button-desc").innerHTML =
+        "Hi! My name is Christa.";
+      break;
+    case "sleep":
+      center_btn_image.src = "https://i.imgur.com/8jkQAh9.png";
+      document.getElementById("button-desc").innerHTML =
+        "Hi! My name is Christa.";
+      break;
+    case "about-me":
+      center_btn_image.src = "https://i.imgur.com/4bOPC5D.png";
+      document.getElementById("button-desc").innerHTML = "About Me";
+      break;
+    case "projects":
+      center_btn_image.src = "https://i.imgur.com/mhOObig.png";
+      document.getElementById("button-desc").innerHTML = "Projects";
+      break;
+    case "artwork":
+      center_btn_image.src = "https://i.imgur.com/D7o8FlG.png";
+      document.getElementById("button-desc").innerHTML = "Artwork";
+      break;
+    case "contact":
+      center_btn_image.src = "https://i.imgur.com/gfFSfck.png";
+      document.getElementById("button-desc").innerHTML = "Contact";
+      break;
+    default:
+      center_btn_image.src = "https://i.imgur.com/OYTKeHM.png";
+      document.getElementById("button-desc").innerHTML =
+        "Hi! My name is Christa.";
+      break;
   }
-}
-// When the user clicks on the button, scroll to the top of the document
-mybutton.addEventListener("click", backToTop);
-
-function backToTop() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
 }
 
 var reveals = document.querySelectorAll(".reveal");
@@ -133,7 +147,7 @@ function showMore() {
     }
   }
 }
-//FORM STUFF!!!!!!!!!!!!!!
+
 const form = document.getElementById("contact-form");
 const submissionMessage = document.getElementById("submission-message");
 
@@ -168,16 +182,19 @@ form.addEventListener("submit", (event) => {
 
 let submithover = false;
 
-/*
-function submitHover() {
-  //'<i class="fa-solid fa-arrow-right fa-beat"></i>';
+// Add click-to-scroll behavior for each paw button
+about_me_button.addEventListener("click", () => {
+  document.getElementById("about-me").scrollIntoView({ behavior: "smooth" });
+});
 
-  if (submithover) {
-    submithover = false;
-    document.getElementById("submit-arrow").classList.remove("fa-beat");
-  } else {
-    submithover = true;
-    document.getElementById("submit-arrow").classList.add("fa-beat");
-  }
-}
-*/
+projects_button.addEventListener("click", () => {
+  document.getElementById("projects").scrollIntoView({ behavior: "smooth" });
+});
+
+artwork_button.addEventListener("click", () => {
+  document.getElementById("artwork").scrollIntoView({ behavior: "smooth" });
+});
+
+contact_button.addEventListener("click", () => {
+  document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+});
