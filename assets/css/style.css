@@ -25,7 +25,8 @@ border-style: solid;
   padding: 0;
   margin: 0;
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
+  height: 100vh; /* fallback for older browsers */
   max-height: 1450px;
   position: relative;
   background-color: #ffd4e1;
